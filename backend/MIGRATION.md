@@ -46,7 +46,7 @@ The API endpoints remain the same, but the backend implementation has changed:
 
 - `/ask` - Now uses OpenAI for embeddings and xAI's Grok model for responses
 - `/upload` - Now stores data in SQLite instead of MongoDB
-- `/generate` - Now uses OpenAI embeddings instead of xAI embeddings
+- `/generate` - Now uses OpenAI embeddings
 
 ## Data Migration
 

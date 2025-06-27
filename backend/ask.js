@@ -12,6 +12,7 @@ const GROK_MODEL = 'grok-3-mini';
 
 // Helper function to create chat completion using xAI API
 async function createChatCompletion(messages, apiKey) {
+  console.log('createChatCompletion: Starting API call to xAI...');
   const response = await fetch(`${XAI_API_BASE}/chat/completions`, {
     method: 'POST',
     headers: {
@@ -20,12 +21,16 @@ async function createChatCompletion(messages, apiKey) {
     },
     body: JSON.stringify({
       model: GROK_MODEL,
+      reasoning_effort: "low",
       messages,
       max_tokens: 512,
       temperature: 0.4,
-      stream: true,
+      stream: false, // Try non-streaming first
     }),
   });
+
+  console.log('createChatCompletion: Got response from xAI API');
+  console.log('createChatCompletion: Response status:', response.status);
 
   if (!response.ok) {
     const errorText = await response.text();
@@ -33,51 +38,26 @@ async function createChatCompletion(messages, apiKey) {
     throw new Error(`xAI API error: ${response.status} ${response.statusText} - ${errorText}`);
   }
 
-  // Create a transform stream to parse the xAI response
-  const { Readable, Transform } = require('stream');
-  
-  const parseStream = new Transform({
-    transform(chunk, encoding, callback) {
-      try {
-        const lines = chunk.toString().split('\n');
-        let content = '';
-        
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = line.slice(6); // Remove 'data: ' prefix
-            
-            if (data === '[DONE]') {
-              // End of stream
-              break;
-            }
-            
-            try {
-              const parsed = JSON.parse(data);
-              if (parsed.choices && parsed.choices[0] && parsed.choices[0].delta) {
-                const delta = parsed.choices[0].delta;
-                // Only include the actual content, not reasoning_content
-                if (delta.content) {
-                  content += delta.content;
-                }
-              }
-            } catch (parseError) {
-              // Skip malformed JSON
-              continue;
-            }
-          }
-        }
-        
-        if (content) {
-          this.push(content);
-        }
-        callback();
-      } catch (error) {
-        callback(error);
-      }
-    }
-  });
+  const responseData = await response.json();
+  console.log('createChatCompletion: Full response:', JSON.stringify(responseData, null, 2));
 
-  return response.body.pipe(parseStream);
+  if (responseData.choices && responseData.choices[0] && responseData.choices[0].message) {
+    const message = responseData.choices[0].message;
+
+    let content = message.content;
+
+    if (!content) {
+      content = 'Sorry, I couldn\'t generate a response at this time.';
+    }
+
+    console.log('createChatCompletion: Extracted content:', content);
+
+    // Create a readable stream from the content
+    const { Readable } = require('stream');
+    return Readable.from([content]);
+  } else {
+    throw new Error('No content found in xAI response');
+  }
 }
 
 async function handleAsk(params) {
@@ -104,6 +84,8 @@ async function handleAsk(params) {
 
     // Moderate the content
     const question = params.question.trim();
+    console.log('Question received:', question);
+
     const { results: moderationRes } = await openai.moderations.create({
       input: question,
     });
@@ -117,10 +99,25 @@ async function handleAsk(params) {
       model: 'text-embedding-ada-002',
       input: question.replace(/\n/g, ' '),
     });
-    
+
     // Get all pages
-    const { project = 'default' } = params;
+    const { project = 'portfolio' } = params;
     const pages = await db.getPagesByProject(project);
+    console.log(`Found ${pages.length} pages in database for project: ${project}`);
+
+    if (pages.length === 0) {
+      console.log('No pages found in database. Make sure to upload documentation first.');
+      throw new Error('No documentation found. Please upload some documentation first.');
+    }
+
+    // Filter out pages without embeddings
+    const pagesWithEmbeddings = pages.filter(page => page.embedding && Array.isArray(page.embedding));
+    console.log(`Found ${pagesWithEmbeddings.length} pages with embeddings out of ${pages.length} total pages`);
+
+    if (pagesWithEmbeddings.length === 0) {
+      console.log('No pages with embeddings found. Please generate embeddings first.');
+      throw new Error('No pages with embeddings found. Please generate embeddings first.');
+    }
 
     // Search vectors to generate context
     const memDB = await create({
@@ -131,15 +128,17 @@ async function handleAsk(params) {
         embedding: 'vector[1536]',
       },
     });
-    await insertMultiple(memDB, pages);
+    await insertMultiple(memDB, pagesWithEmbeddings);
 
     const { hits } = await searchVector(memDB, {
       vector: embedding,
       property: 'embedding',
-      similarity: 0.8,  // Minimum similarity. Defaults to `0.8`
+      similarity: 0.3,  // Lowered from 0.8 to get more matches
       limit: 10,        // Defaults to `10`
       offset: 0,        // Defaults to `0`
     });
+
+    console.log(`Found ${hits.length} relevant hits with similarity >= 0.3`);
 
     let tokenCount = 0;
     let contextSections = '';
@@ -156,23 +155,40 @@ async function handleAsk(params) {
       contextSections += `${content.trim()}\n---\n`;
     }
 
+    console.log(`Context sections length: ${contextSections.length} characters`);
+    console.log(`Context sections preview: ${contextSections.substring(0, 200)}...`);
+
+    // If no context found, provide a fallback
+    if (!contextSections.trim()) {
+      contextSections = "This is Phil Tompkins' portfolio documentation. It contains information about his projects, work experience, fun projects, and adventures.";
+    }
+
     // Ask Grok
-    const prompt = `You are a very kindly assistant who loves to help people. Given the following sections from documentation, answer the question using only that information, outputted in markdown format. If you are unsure and the answer is not explicitly written in the documentation, say "Sorry, I don't know how to help with that." Always trying to answer in the spoken language of the questioner.
+    const prompt = `You are Philbot, a friendly robot assistant that helps people learn about Phil Tompkins' portfolio and background. Your name is Philbot. You are knowledgeable about Phil's projects, work experience, and everything included here based on the documentation provided.
+
+Given the following sections from documentation, answer the question using the information here. If you are unsure and the answer isn't in the documentation, you can say "Sorry, Phil hasn't shared that information with me yet.".
 
 Context sections:
 ${contextSections}
 
-Question:
-${question}
 
 Answer as markdown (including related code snippets if available):`
 
+    console.log('Sending prompt to Grok...');
+    console.log('Prompt preview:', prompt.substring(0, 500) + '...');
+
     const messages = [{
-      role: 'user',
+      role: 'system',
       content: prompt,
+    },
+    {
+      role: 'user',
+      content: question,
     }];
 
+    console.log('About to call createChatCompletion...');
     const responseBody = await createChatCompletion(messages, xaiApiKey);
+    console.log('createChatCompletion returned, returning response...');
     return responseBody;
   } catch (error) {
     console.error('Error in ask handler:', error);
