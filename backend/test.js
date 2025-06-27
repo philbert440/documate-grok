@@ -1,3 +1,4 @@
+require('dotenv').config();
 const axios = require('axios');
 
 const BASE_URL = 'http://localhost:3000';

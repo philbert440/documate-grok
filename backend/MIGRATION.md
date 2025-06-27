@@ -1,4 +1,66 @@
-# Migration Guide: From Aircode to Express + SQLite
+# Migration Guide
+
+This document outlines the migration process from the AirCode backend to the Express + SQLite backend.
+
+## Overview
+
+The new backend provides:
+- **Express.js** server instead of AirCode functions
+- **SQLite** database instead of AirCode's MongoDB
+- **Local file storage** instead of AirCode's file storage
+- **Hybrid AI approach**: OpenAI for embeddings, xAI for chat completions
+
+## Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `OPENAI_API_KEY` | Yes | Your OpenAI API key (for embeddings) |
+| `XAI_API_KEY` | Yes | Your xAI API key (for chat completions) |
+
+## Migration Steps
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Set up environment variables:**
+   ```bash
+   cp env.example .env
+   ```
+   Edit `.env` and add your OpenAI and xAI API keys.
+
+3. **Initialize the database:**
+   ```bash
+   npm run init-db
+   ```
+
+4. **Start the server:**
+   ```bash
+   npm start
+   ```
+
+## API Changes
+
+The API endpoints remain the same, but the backend implementation has changed:
+
+- `/ask` - Now uses OpenAI for embeddings and xAI's Grok model for responses
+- `/upload` - Now stores data in SQLite instead of MongoDB
+- `/generate` - Now uses OpenAI embeddings instead of xAI embeddings
+
+## Data Migration
+
+If you have existing data in AirCode, you'll need to re-upload your documents to the new backend since the data structures are different.
+
+## Benefits
+
+- **Self-hosted**: No dependency on AirCode
+- **Cost-effective**: No AirCode usage fees
+- **Customizable**: Full control over the backend
+- **Scalable**: Can be deployed anywhere
+- **Best of both worlds**: Reliable OpenAI embeddings + powerful xAI responses
+
+## Migration Guide: From Aircode to Express + SQLite
 
 This guide helps you migrate from the Aircode backend to the new Express + SQLite backend.
 
@@ -26,7 +88,7 @@ This guide helps you migrate from the Aircode backend to the new Express + SQLit
 cd backend
 npm install
 cp env.example .env
-# Edit .env and add your OpenAI API key
+# Edit .env and add your xAI API key
 npm run init-db
 npm start
 ```
@@ -113,13 +175,6 @@ CMD ["npm", "start"]
 #### Option 3: Railway/Render/Heroku
 Deploy as a standard Node.js application with environment variables.
 
-## Environment Variables
-
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `OPENAI_API_KEY` | Yes | Your OpenAI API key |
-| `PORT` | No | Server port (default: 3000) |
-
 ## Database Management
 
 ### Backup
@@ -152,9 +207,9 @@ If you need to migrate data from other sources, you can create custom scripts us
    npm start
    ```
 
-3. **OpenAI API errors**
+3. **xAI API errors**
    - Check your API key in `.env`
-   - Verify your OpenAI account has credits
+   - Verify your xAI account has credits
 
 4. **CORS issues**
    - The server includes CORS middleware

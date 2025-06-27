@@ -25,6 +25,10 @@ async function handleUpload(params) {
     throw new Error('Missing environment variable OPENAI_API_KEY');
   }
 
+  if (!process.env.XAI_API_KEY) {
+    throw new Error('Missing environment variable XAI_API_KEY');
+  }
+
   const { operation, project = 'default' } = params;
 
   if (!['add', 'delete', 'clean', 'generate'].includes(operation)) {

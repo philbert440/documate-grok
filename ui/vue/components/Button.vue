@@ -10,9 +10,9 @@ export interface DocumateProps {
 }
 
 const props = withDefaults(defineProps<DocumateProps>(), {
-  endpoint: '',
-  buttonLabel: 'Ask AI',
-  placeholder: 'Ask a question...',
+  endpoint: 'http://localhost:3000/ask',
+  buttonLabel: 'Ask Philbot',
+  placeholder: 'Ask Philbot a question.',
   predefinedQuestions: () => [],
 })
 

@@ -11,7 +11,7 @@ export default {
     'nav-bar-content-before': () => h(
       Documate,
       {
-        endpoint: '',
+        endpoint: 'http://localhost:3000/ask',
       },
     )
   })

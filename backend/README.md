@@ -1,82 +1,69 @@
 # Documate Backend
 
-A Node.js backend for Documate using Express, SQLite, and filesystem storage.
+A backend service for Documate that provides document search and question-answering capabilities using Express, SQLite, OpenAI embeddings, and xAI chat completions.
 
 ## Features
 
-- **Express.js** - Fast, unopinionated web framework
-- **SQLite** - Lightweight, serverless database
-- **Filesystem Storage** - Local file storage for uploads
-- **OpenAI Integration** - AI-powered question answering
-- **Vector Search** - Semantic search using embeddings
-- **Streaming Responses** - Real-time AI responses
+- Document upload and storage
+- Vector search using OpenAI embeddings
+- Question answering using xAI's Grok model
+- SQLite database for data persistence
+- RESTful API endpoints
 
 ## Setup
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+1. Install dependencies:
+```bash
+npm install
+```
 
-2. **Set up environment variables:**
-   ```bash
-   cp env.example .env
-   ```
-   Then edit `.env` and add your OpenAI API key:
-   ```
-   OPENAI_API_KEY=your_openai_api_key_here
-   ```
+2. Create a `.env` file based on `env.example`:
+```bash
+cp env.example .env
+```
 
-3. **Initialize the database:**
-   ```bash
-   npm run init-db
-   ```
+3. Set your API keys in the `.env` file:
+```
+OPENAI_API_KEY=your_openai_api_key_here
+XAI_API_KEY=your_xai_api_key_here
+```
 
-4. **Start the server:**
-   ```bash
-   # Development mode
-   npm run dev
-   
-   # Production mode
-   npm start
-   ```
+4. Initialize the database:
+```bash
+npm run init-db
+```
 
-The server will start on `http://localhost:3000` by default.
+5. Start the server:
+```bash
+npm start
+```
 
 ## API Endpoints
 
-### Health Check
-- `GET /health` - Check server status
+- `POST /ask` - Ask questions about your documentation
+- `POST /upload` - Upload and process documents
+- `POST /generate` - Generate embeddings for existing documents
 
-### Ask Questions
-- `POST /ask` - Ask questions and get AI-powered answers
-  ```json
-  {
-    "question": "How do I install the package?",
-    "project": "default"
-  }
-  ```
+## Environment Variables
 
-### Upload Pages
-- `POST /upload` - Upload and manage documentation pages
-  ```json
-  {
-    "operation": "add",
-    "project": "default",
-    "path": "/getting-started",
-    "title": "Getting Started",
-    "content": "# Getting Started\n\nWelcome to our documentation..."
-  }
-  ```
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `OPENAI_API_KEY` | Yes | Your OpenAI API key (for embeddings) |
+| `XAI_API_KEY` | Yes | Your xAI API key (for chat completions) |
+| `PORT` | No | Server port (default: 3000) |
 
-### Operations
-- `add` - Add or update a page
-- `delete` - Delete a specific page
-- `clean` - Delete all pages for a project
-- `generate` - Generate embeddings for pages without them
+## How it works
 
-### File Upload
-- `POST /upload-file` - Upload files (multipart/form-data)
+This backend uses a hybrid approach:
+- **OpenAI embeddings**: For creating vector representations of documents and questions (cost-effective and reliable)
+- **xAI Grok model**: For generating chat responses (powerful AI model)
+
+## Development
+
+Run in development mode with auto-reload:
+```bash
+npm run dev
+```
 
 ## Database Schema
 
@@ -112,12 +99,6 @@ backend/
 ├── package.json        # Dependencies
 └── env.example         # Environment variables template
 ```
-
-## Development
-
-- **Hot reload:** `npm run dev` (uses nodemon)
-- **Database reset:** Delete `data/documate.db` and run `npm run init-db`
-- **Logs:** Check console output for detailed logging
 
 ## Production Deployment
 

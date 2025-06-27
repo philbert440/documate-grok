@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@orama/orama": "1.2.6",
-    "aircode": "0.7.0",
-    "gpt-3-encoder": "1.1.4",
-    "node-fetch": "3.3.2"
-  }
-} 

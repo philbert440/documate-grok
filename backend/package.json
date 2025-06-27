@@ -12,18 +12,25 @@
   "dependencies": {
     "@orama/orama": "1.2.2",
     "ai": "2.2.11",
-    "express": "^4.18.2",
-    "sqlite3": "^5.1.6",
+    "axios": "^1.10.0",
     "cors": "^2.8.5",
-    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "gpt-3-encoder": "1.1.4",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.6.7",
     "openai": "4.5.0",
-    "dotenv": "^16.3.1"
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "keywords": ["documate", "backend", "express", "sqlite"],
+  "keywords": [
+    "documate",
+    "backend",
+    "express",
+    "sqlite"
+  ],
   "author": "",
   "license": "MIT"
 }

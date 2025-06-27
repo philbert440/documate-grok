@@ -1,8 +1,0 @@
-{
-  "root": "pages",
-  "include": [
-    "**/*.md",
-    "**/*.mdx"
-  ],
-  "backend": ""
-}

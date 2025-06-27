@@ -43,14 +43,13 @@ app.get('/health', (req, res) => {
 app.post('/ask', async (req, res) => {
   try {
     const stream = await handleAsk(req.body);
-    
+
     // Set headers for streaming
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-    res.setHeader('Transfer-Encoding', 'chunked');
-    
+
     // Pipe the stream to response
     stream.pipe(res);
-    
+
     // Handle stream errors
     stream.on('error', (error) => {
       console.error('Stream error:', error);
@@ -58,11 +57,11 @@ app.post('/ask', async (req, res) => {
         res.status(500).json({ error: 'Stream error occurred' });
       }
     });
-    
+
   } catch (error) {
     console.error('Ask endpoint error:', error);
-    res.status(500).json({ 
-      error: error.message || 'Failed to generate answer' 
+    res.status(500).json({
+      error: error.message || 'Failed to generate answer'
     });
   }
 });
@@ -74,8 +73,8 @@ app.post('/upload', async (req, res) => {
     res.json(result);
   } catch (error) {
     console.error('Upload endpoint error:', error);
-    res.status(500).json({ 
-      error: error.message || 'Failed to process upload' 
+    res.status(500).json({
+      error: error.message || 'Failed to process upload'
     });
   }
 });
@@ -86,8 +85,8 @@ app.post('/upload-file', upload.single('file'), (req, res) => {
     if (!req.file) {
       return res.status(400).json({ error: 'No file uploaded' });
     }
-    
-    res.json({ 
+
+    res.json({
       message: 'File uploaded successfully',
       filename: req.file.filename,
       path: req.file.path
@@ -101,9 +100,9 @@ app.post('/upload-file', upload.single('file'), (req, res) => {
 // Error handling middleware
 app.use((error, req, res, next) => {
   console.error('Unhandled error:', error);
-  res.status(500).json({ 
+  res.status(500).json({
     error: 'Internal server error',
-    message: error.message 
+    message: error.message
   });
 });
 
@@ -125,8 +124,8 @@ process.on('SIGINT', () => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Documate backend server running on port ${PORT}`);
+  console.log(`Philbot backend server running on port ${PORT}`);
   console.log(`Health check: http://localhost:${PORT}/health`);
 });
 
-module.exports = app; 
+module.exports = app;

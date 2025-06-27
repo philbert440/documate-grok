@@ -3,5 +3,5 @@
   "include": [
     "**/*.md"
   ],
-  "backend": ""
+  "backend": "http://localhost:3000"
 }
