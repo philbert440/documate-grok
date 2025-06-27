@@ -1,9 +1,29 @@
 {
+  "name": "documate-backend",
+  "version": "1.0.0",
+  "description": "Documate backend with Express, SQLite, and filesystem storage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "init-db": "node init-db.js",
+    "test": "node test.js"
+  },
   "dependencies": {
     "@orama/orama": "1.2.2",
     "ai": "2.2.11",
-    "aircode": "0.6.2",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
     "gpt-3-encoder": "1.1.4",
-    "openai": "4.5.0"
-  }
+    "openai": "4.5.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["documate", "backend", "express", "sqlite"],
+  "author": "",
+  "license": "MIT"
 }

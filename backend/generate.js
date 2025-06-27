@@ -1,23 +1,23 @@
-// @see https://docs.aircode.io/guide/functions/
-const aircode = require('aircode');
 const OpenAI = require('openai');
-
-const PagesTable = aircode.db.table('pages');
+const Database = require('./database');
 
 async function generateEmbeddings(project) {
-  // Find all the pages without embeddings
-  const pages = await PagesTable
-    .where({ project, embedding: null })
-    .find();
-
-  if (!pages || pages.length === 0) {
-    return { ok: 1 };
-  }
-
-  // Replace newlines with spaces for OpenAI embeddings
-  const input = pages.map(page => page.content.replace(/\n/g, ' '));
+  const db = new Database();
   
   try {
+    // Find all the pages without embeddings
+    const pages = await db.getPagesWithoutEmbeddings(project);
+
+    if (!pages || pages.length === 0) {
+      console.log('No pages without embeddings found');
+      return { ok: 1 };
+    }
+
+    console.log(`Generating embeddings for ${pages.length} pages`);
+
+    // Replace newlines with spaces for OpenAI embeddings
+    const input = pages.map(page => page.content.replace(/\n/g, ' '));
+    
     const openai = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
     });
@@ -27,19 +27,18 @@ async function generateEmbeddings(project) {
       input,
     });
 
-    const updatedPage = pages.map((page, index) => ({
-      _id: page._id,
-      embedding: data[index].embedding,
-    }));
-
-    for (let i = 0; i < updatedPage.length; i += 100) {
-      await PagesTable.save(updatedPage.slice(i, i + 100));
+    // Update pages with embeddings
+    for (let i = 0; i < pages.length; i++) {
+      await db.updatePageEmbedding(pages[i].id, data[i].embedding);
     }
-  
+
+    console.log(`Successfully generated embeddings for ${pages.length} pages`);
     return { ok: 1 };
   } catch (error) {
-    console.error(`Failed to generate embeddings for ${project}`);
+    console.error(`Failed to generate embeddings for ${project}:`, error);
     throw error;
+  } finally {
+    await db.close();
   }
 }
 

@@ -1,31 +1,21 @@
-// @see https://docs.aircode.io/guide/functions/
-const aircode = require('aircode');
 const OpenAI = require('openai');
 const { create, insertMultiple, searchVector } = require('@orama/orama');
 const tokenizer = require('gpt-3-encoder');
 const { OpenAIStream } = require('ai');
+const Database = require('./database');
 
 const MAX_CONTEXT_TOKEN = 1500;
-const PagesTable = aircode.db.table('pages');
 
-module.exports = async function (params, context) {
+async function handleAsk(params) {
   if (!process.env.OPENAI_API_KEY) {
-    console.log('Missing environment variable OPENAI_API_KEY. Abort.');
-    context.status(400);
-    return {
-      error:
-        'You are missing some params, please open AirCode and find the details in Logs section',
-    };
+    throw new Error('Missing environment variable OPENAI_API_KEY');
   }
 
   if (!params.question) {
-    console.log('Missing param `question`. Abort.');
-    context.status(400);
-    return {
-      error:
-        'You are missing some params, please open AirCode and find the details in Logs section',
-    };
+    throw new Error('Missing param `question`');
   }
+
+  const db = new Database();
 
   try {
     const openai = new OpenAI({
@@ -39,11 +29,7 @@ module.exports = async function (params, context) {
     });
     if (moderationRes[0].flagged) {
       console.log('The user input contains flagged content.', moderationRes[0].categories);
-      context.status(403);
-      return {
-        error: 'Question input didn\'t meet the moderation criteria.',
-        categories: moderationRes[0].categories,
-      };
+      throw new Error('Question input didn\'t meet the moderation criteria.');
     }
 
     // Create embedding from the question
@@ -54,10 +40,7 @@ module.exports = async function (params, context) {
     
     // Get all pages
     const { project = 'default' } = params;
-    const pages = await PagesTable
-      .where({ project })
-      .projection({ path: 1, title: 1, content: 1, embedding: 1, _id: 0 })
-      .find();
+    const pages = await db.getPagesByProject(project);
 
     // Search vectors to generate context
     const memDB = await create({
@@ -115,16 +98,17 @@ Answer as markdown (including related code snippets if available):`
       max_tokens: 512,
       temperature: 0.4,
       stream: true,
-    })
+    });
 
     // Transform the response into a readable stream
     const stream = OpenAIStream(response);
     return stream;
   } catch (error) {
-    console.error(error);
-    context.status(500);
-    return {
-      error: 'Failed to generate anwser.',
-    };
+    console.error('Error in ask handler:', error);
+    throw error;
+  } finally {
+    await db.close();
   }
 }
+
+module.exports = handleAsk;
