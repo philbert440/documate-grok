@@ -2,9 +2,13 @@
 
 The backend for Documate is a set of serverless functions that handle the content upload and process question requests. These functions can be deployed to [AirCode](https://aircode.io) by a single click.
 
-## Get a Copy
+## Choose Your Backend
 
-By clicking the button below, you can get a copy of the backend and launch your own App.
+Documate supports multiple AI providers. Choose the one that best fits your needs:
+
+### OpenAI Backend (Default)
+
+By clicking the button below, you can get a copy of the OpenAI backend and launch your own App.
 
 <a href="https://aircode.io/dashboard?owner=AirCodeLabs&repo=documate&branch=main&path=backend&appname=Documate" style="display: inline-block" target="_blank">
   <img src="https://aircode.io/aircode-deploy-button.svg" alt="Deploy with AirCode" width="166">
@@ -12,7 +16,12 @@ By clicking the button below, you can get a copy of the backend and launch your 
 
 The functions code is located in the [backend directory on GitHub](https://github.com/AirCodeLabs/documate/tree/main/backend).
 
-## Deploy
+### Alternative Backends
+
+- **[Azure OpenAI Backend](../../alternative/azure-openai-backend/README.md)**: Use Microsoft Azure OpenAI instead of OpenAI
+- **[xAI Grok Backend](/getting-started/xai-backend)**: Use xAI's Grok-3-mini model for chat completions
+
+## Deploy OpenAI Backend
 
 Once you've created the App, you should set the `OPENAI_API_KEY` environment variable in the __Environments__ tabs. You can find the API key in your [OpenAI dashboard](https://platform.openai.com/account/api-keys).
 

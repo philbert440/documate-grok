@@ -17,6 +17,7 @@
 Documate is an open-source tool designed to seamlessly embed AI chat dialog into your documentation site. It uses your content to generate real-time answers to user questions, effectively acting as a "ChatGPT" for your platform.
 
 - **Hassle-free integration** - Easily integrate with VitePress, Docusaurus, Docsify, and any other doc sites, no AI or LLM knowledge required.
+- **Multiple AI providers** - Support for OpenAI, Azure OpenAI, and xAI Grok-3-mini models.
 - **Fully controllable** - You own the code, you own your data, you choose which content to index.
 - **Fully customizable** - Come with a finely-tuned UI that's fully customizable to cater to your specific needs.
 

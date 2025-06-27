@@ -1,0 +1,5 @@
+{
+  "root": "docs",
+  "include": ["**/*.md"],
+  "backend": "https://your-xai-grok-app.us.aircode.run/upload"
+} 

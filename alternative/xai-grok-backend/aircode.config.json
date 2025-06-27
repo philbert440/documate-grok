@@ -1,0 +1,9 @@
+{
+  "name": "Documate backend xAI Grok",
+  "runtime": "node/v18",
+  "region": "US",
+  "envs": [
+    "XAI_API_KEY"
+  ],
+  "typescript": false
+} 
