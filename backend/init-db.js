@@ -107,7 +107,7 @@ function processMarkdownFiles() {
           VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
         `;
 
-        db.run(sql, ['default', file, title, chunk, checksum, chunkIndex, null], function(err) {
+        db.run(sql, ['portfolio', file, title, chunk, checksum, chunkIndex, null], function(err) {
           if (err) {
             console.error(`Error saving chunk ${chunkIndex} of ${file}:`, err);
             reject(err);
