@@ -5,9 +5,18 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "start:prod": "node server.js",
     "dev": "nodemon server.js",
     "init-db": "node init-db.js",
-    "test": "node test.js"
+    "test": "node test.js",
+    "test:https": "node test-https.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:start:prod": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop philbot-backend",
+    "pm2:restart": "pm2 restart philbot-backend",
+    "pm2:delete": "pm2 delete philbot-backend",
+    "pm2:logs": "pm2 logs philbot-backend",
+    "pm2:monit": "pm2 monit"
   },
   "dependencies": {
     "@orama/orama": "1.2.2",
@@ -20,6 +29,7 @@
     "multer": "^1.4.5-lts.1",
     "node-fetch": "^2.6.7",
     "openai": "4.5.0",
+    "pm2": "^5.3.0",
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {

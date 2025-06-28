@@ -4,12 +4,15 @@ const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const https = require('https');
+const http = require('http');
 
 const handleAsk = require('./ask');
 const handleUpload = require('./upload');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Middleware
 app.use(cors());
@@ -122,10 +125,58 @@ process.on('SIGINT', () => {
   process.exit(0);
 });
 
+// Function to create and start the server
+function startServer() {
+  const enableHttps = process.env.ENABLE_HTTPS === 'true';
+
+  if (enableHttps) {
+    // HTTPS Server
+    const sslCertPath = process.env.SSL_CERT_PATH;
+    const sslKeyPath = process.env.SSL_KEY_PATH;
+
+    if (!sslCertPath || !sslKeyPath) {
+      console.error('HTTPS is enabled but SSL certificate paths are not configured.');
+      console.error('Please set SSL_CERT_PATH and SSL_KEY_PATH environment variables.');
+      process.exit(1);
+    }
+
+    // Check if certificate files exist
+    if (!fs.existsSync(sslCertPath) || !fs.existsSync(sslKeyPath)) {
+      console.error('SSL certificate files not found:');
+      console.error(`Certificate: ${sslCertPath}`);
+      console.error(`Private key: ${sslKeyPath}`);
+      process.exit(1);
+    }
+
+    const httpsOptions = {
+      cert: fs.readFileSync(sslCertPath),
+      key: fs.readFileSync(sslKeyPath)
+    };
+
+    const httpsServer = https.createServer(httpsOptions, app);
+
+    httpsServer.listen(PORT, () => {
+      console.log(`🚀 Philbot backend server running on HTTPS port ${PORT}`);
+      console.log(`🔒 Health check: https://localhost:${PORT}/health`);
+      console.log(`🌍 Environment: ${NODE_ENV}`);
+    });
+
+    return httpsServer;
+  } else {
+    // HTTP Server
+    const httpServer = http.createServer(app);
+
+    httpServer.listen(PORT, () => {
+      console.log(`🚀 Philbot backend server running on HTTP port ${PORT}`);
+      console.log(`🔗 Health check: http://localhost:${PORT}/health`);
+      console.log(`🌍 Environment: ${NODE_ENV}`);
+    });
+
+    return httpServer;
+  }
+}
+
 // Start server
-app.listen(PORT, () => {
-  console.log(`Philbot backend server running on port ${PORT}`);
-  console.log(`Health check: http://localhost:${PORT}/health`);
-});
+const server = startServer();
 
 module.exports = app;
