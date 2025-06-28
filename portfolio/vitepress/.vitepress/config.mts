@@ -52,15 +52,12 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Family & Fun',
+        text: 'About Me',
         items: [
-          { text: 'Chengdu, China', link: '/coming-soon' },
-          { text: 'Keai (son)', link: '/son' },
-          { text: 'Nintendo World', link: '/nintendo' },
-          { text: 'Voron Switchwire', link: '/voron' },
-          { text: 'Disney World', link: '/disney' },
-          { text: 'Rose (daughter)', link: '/daughter' },
-          { text: 'Yuguo (wife)', link: '/wife' }
+          { text: 'My Story', link: '/story' },
+          { text: 'Interests', link: '/interests' },
+          { text: 'Hobbies', link: '/hobbies' },
+          { text: '3D Printing', link: '/3dprinting' },
         ]
       }
     ],
