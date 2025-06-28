@@ -6,9 +6,13 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "node scripts/build-config.js && vitepress build",
+    "docs:build:prod": "NODE_ENV=production BUILD_ENV=production node scripts/build-config.js && vitepress build",
+    "docs:build:https": "NODE_ENV=production BUILD_ENV=production BACKEND_URL=https://backend.philtompkins.com node scripts/build-config.js && vitepress build",
     "docs:preview": "vitepress preview",
-    "documate:upload": "node ../../cli/documate/upload.js"
+    "documate:upload": "node ../../cli/documate/upload.js",
+    "documate:upload:prod": "BACKEND_URL=https://backend.philtompkins.com node ../../cli/documate/upload.js",
+    "config:build": "node scripts/build-config.js"
   },
   "devDependencies": {
     "vitepress": "^1.0.0-rc.10"

@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import Documate from '@documate/vue'
 import '@documate/vue/dist/style.css'
 import './custom.css'
+import { getBackendEndpoint } from '../../config/backend.js'
 
 export default {
   ...DefaultTheme,
@@ -11,7 +12,7 @@ export default {
     'nav-bar-content-before': () => h(
       Documate,
       {
-        endpoint: 'http://localhost:3000/ask',
+        endpoint: getBackendEndpoint('ask'),
       },
     )
   })

@@ -12,8 +12,8 @@ module.exports = {
       NODE_ENV: 'production',
       PORT: 3000,
       ENABLE_HTTPS: 'true',
-      SSL_CERT_PATH: '/etc/letsencrypt/live/yourdomain.com/fullchain.pem',
-      SSL_KEY_PATH: '/etc/letsencrypt/live/yourdomain.com/privkey.pem'
+      SSL_CERT_PATH: '/etc/letsencrypt/live/backend.philtompkins.com/fullchain.pem',
+      SSL_KEY_PATH: '/etc/letsencrypt/live/backend.philtompkins.com/privkey.pem'
     },
     // Logging configuration
     log_file: './logs/combined.log',

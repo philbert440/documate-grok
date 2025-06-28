@@ -1,0 +1,7 @@
+{
+  "backendUrl": "http://localhost:3000",
+  "nodeEnv": "development",
+  "buildEnv": "development",
+  "timestamp": "2025-06-28T17:11:21.710Z",
+  "isProduction": false
+}

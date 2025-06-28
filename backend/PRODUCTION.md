@@ -31,8 +31,8 @@ This guide will help you deploy the Philbot backend to production with HTTPS sup
    
    # HTTPS Configuration
    ENABLE_HTTPS=true
-   SSL_CERT_PATH=/etc/letsencrypt/live/yourdomain.com/fullchain.pem
-   SSL_KEY_PATH=/etc/letsencrypt/live/yourdomain.com/privkey.pem
+   SSL_CERT_PATH=/etc/letsencrypt/live/philtompkins.com/fullchain.pem
+   SSL_KEY_PATH=/etc/letsencrypt/live/philtompkins.com/privkey.pem
    ```
 
 3. **Run the deployment script:**
@@ -57,7 +57,7 @@ This guide will help you deploy the Philbot backend to production with HTTPS sup
 
 2. **Obtain SSL certificate:**
    ```bash
-   sudo certbot certonly --standalone -d yourdomain.com
+   sudo certbot certonly --standalone -d philtompkins.com
    ```
 
 3. **Auto-renewal setup:**
@@ -113,17 +113,17 @@ Create `/etc/nginx/sites-available/philbot-backend`:
 ```nginx
 server {
     listen 80;
-    server_name yourdomain.com;
+    server_name philtompkins.com;
     return 301 https://$server_name$request_uri;
 }
 
 server {
     listen 443 ssl http2;
-    server_name yourdomain.com;
+    server_name philtompkins.com;
 
     # SSL Configuration
-    ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/philtompkins.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/philtompkins.com/privkey.pem;
     
     # SSL Security Settings
     ssl_protocols TLSv1.2 TLSv1.3;
@@ -206,7 +206,7 @@ curl http://localhost:3000/health
 curl -k https://localhost:3000/health
 
 # Through reverse proxy
-curl https://yourdomain.com/health
+curl https://philtompkins.com/health
 ```
 
 ## Environment Variables Reference
@@ -226,8 +226,8 @@ curl https://yourdomain.com/health
 ### Common Issues
 
 1. **SSL Certificate Errors:**
-   - Check file permissions: `sudo chmod 644 /etc/letsencrypt/live/yourdomain.com/fullchain.pem`
-   - Verify certificate validity: `openssl x509 -in /etc/letsencrypt/live/yourdomain.com/fullchain.pem -text -noout`
+   - Check file permissions: `sudo chmod 644 /etc/letsencrypt/live/philtompkins.com/fullchain.pem`
+   - Verify certificate validity: `openssl x509 -in /etc/letsencrypt/live/philtompkins.com/fullchain.pem -text -noout`
 
 2. **Port Already in Use:**
    - Check what's using the port: `sudo netstat -tulpn | grep :3000`
@@ -277,5 +277,5 @@ NODE_ENV=development npm start
 
 3. **SSL certificates backup:**
    ```bash
-   sudo cp -r /etc/letsencrypt/live/yourdomain.com /backup/ssl/
+   sudo cp -r /etc/letsencrypt/live/philtompkins.com /backup/ssl/
    ``` 

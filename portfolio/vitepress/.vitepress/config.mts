@@ -1,9 +1,22 @@
 import { defineConfig } from 'vitepress'
+import { loadEnv } from 'vite'
+
+// Load environment variables
+const env = loadEnv(process.env.NODE_ENV || 'development', process.cwd(), '')
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Phil Tompkins",
   description: "Builder of things",
+  
+  // Vite configuration for environment variables
+  vite: {
+    define: {
+      __BACKEND_URL__: JSON.stringify(env.BACKEND_URL || 'http://localhost:3000'),
+      __IS_PRODUCTION__: JSON.stringify(env.NODE_ENV === 'production' || env.BUILD_ENV === 'production')
+    }
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
