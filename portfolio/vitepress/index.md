@@ -25,7 +25,7 @@ features:
     details: A direct to consumer Laboratory testing services startup, with an AI recommendation engine, for user specific remediations based on their test results.
     link: /adapify
   - title: Microsoft
-    details: "Deploying Cloud infrastructure and modernizing legacy systems, for enterprise organizations including: Netflix, Sands Casino, PwC, Nielsen, Adobe, Nokia, and more."
+    details: "Deploying Cloud infrastructure and modernizing legacy systems, for enterprise organizations including: Netflix, Sands Casino, 3M, Nielsen, Adobe, Nokia, and more."
     link: /msft
 ---
 
