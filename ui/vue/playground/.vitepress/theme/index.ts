@@ -10,7 +10,7 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       'nav-bar-content-before': () => h(Documate, {
-        endpoint: 'https://localhost:3000/ask',
+        endpoint: 'https://backend.philtompkins.com/ask',
         predefinedQuestions: [
           'What is Documate?',
         ],
