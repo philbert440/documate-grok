@@ -2,7 +2,7 @@
 // This file is used during build time and runtime
 
 // Default backend URL
-const DEFAULT_BACKEND_URL = 'http://localhost:3000'
+const DEFAULT_BACKEND_URL = 'https://backend.philtompkins.com'
 
 // Get backend URL from environment or use default
 export function getBackendUrl() {

@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename)
 
 // Load environment variables
 const env = process.env
-const backendUrl = env.BACKEND_URL || 'http://localhost:3000'
+const backendUrl = env.BACKEND_URL || 'https://backend.philtompkins.com'
 const nodeEnv = env.NODE_ENV || 'development'
 const buildEnv = env.BUILD_ENV || 'development'
 
