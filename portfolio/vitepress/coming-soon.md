@@ -6,6 +6,6 @@ outline: deep
 
 This hasn't been posted yet.
 
-![An image](./images/soon.jpg)
+![An image](/images/soon.jpg)
 
 Please check back later.
