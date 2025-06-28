@@ -23,23 +23,3 @@ When I started at Branding Brand in 2021, I joined the R&D department as the Sen
 
 ## Monitoring, Logging, and Alerts
 
-```md
-<script setup>
-
-```
-
-<script setup>
-import { useData } from 'vitepress'
-
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>theme</pre>
-
-
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).

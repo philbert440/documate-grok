@@ -8,7 +8,7 @@ hero:
   tagline: Scaling Teams and Technology
   image:
     src: /images/self.jpg
-    alt: VitePress
+    alt: PhilsPhoto
   actions:
     - theme: brand
       text: Projects
