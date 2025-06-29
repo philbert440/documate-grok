@@ -1,2 +1,2 @@
-# This has become Philbot and my portfolio site, partly vibe coded over a weekend.
+# This has become Philbot and my portfolio site, partly vibe coded partly hacked together over a weekend.
 Originally hacked up from documate's open source project. I added support for grok just for fun, and then decided to rip out the external cloud services for the backend and replaced them sqlite and expressjs, then deployed it in Azure. Since then its become my portfolio site to keep track of projects past and present. I generate embeddings from the md files and then I feed that to grok and it's able to become Philbot my trusty robot assistant to help answer people's questions about the things I've worked on. 
