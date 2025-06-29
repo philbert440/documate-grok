@@ -23,17 +23,19 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Projects', link: '/projects' },
       { text: 'Companies', link: '/companies' },
-      { text: 'About Me', link: '/fun' }
+      { text: 'About Me', link: '/story' }
     ],
 
     sidebar: [
       {
         text: 'Projects',
         items: [
-          { text: 'Shipcode', link: '/shipcode' },
+          { text: 'Shipcode from 0-1', link: '/shipcode' },
+          { text: 'Flagship Integrations', link: '/shipcode' },
           { text: 'Home Test Pro', link: '/adapify' },
-          { text: 'RxSoil', link: '/adapify' },
+          { text: 'RxSoil Algorithm to AI', link: '/adapify' },
           { text: 'Laboratory SaaS', link: '/adapify' },
+          { text: 'Adapify Sports', link: '/adapify' },
           { text: 'We Evolve Us', link: '/weu' },
           { text: 'Sands Casino Hack', link: '/msft' },
           { text: 'Microsoft acquires Nokia', link: '/msft' },
@@ -46,18 +48,29 @@ export default defineConfig({
           { text: 'Branding Brand', link: '/shipcode' },
           { text: 'Adapify', link: '/adapify' },
           { text: 'Microsoft', link: '/msft' },
+          { text: "-----During College-----"},
           { text: '1901 Group', link: '/1901' },
           { text: 'Genworth Financial', link: '/genworth' },
-          { text: 'Pheon Technologies Group', link: '/pheon' }
+          { text: 'Pheon Tech', link: '/pheon' },
+          { text: 'Starbucks', link: '/oldjobs' },
+          { text: 'Medco', link: '/oldjobs' },
+          { text: "-----Before College-----"},
+          { text: 'HSN', link: '/oldjobs' },
+          { text: 'Phil-Tech', link: '/oldjobs' },
+          { text: 'Pepsi', link: '/oldjobs' },
+          { text: 'Firehouse Subs', link: '/oldjobs' },
+          { text: 'Quiznos', link: '/oldjobs' },
+          { text: 'McDonalds', link: '/oldjobs' },
+          { text: "Noah's Electronics", link: '/oldjobs' },
+          { text: "Medley's Cafe", link: '/oldjobs' },
         ]
       },
       {
         text: 'About Me',
         items: [
           { text: 'My Story', link: '/story' },
-          { text: 'Interests', link: '/interests' },
-          { text: 'Hobbies', link: '/hobbies' },
-          { text: '3D Printing', link: '/3dprinting' },
+          { text: 'Interests & Hobbies', link: '/hobbies' },
+          { text: 'Get in Touch', link: '/contact' },
         ]
       }
     ],
