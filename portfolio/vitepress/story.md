@@ -1,15 +1,14 @@
 # My Story
 
 ## Childhood
+Born in Corning, NY, the 2nd oldest of 6 boys and no girls. 
 
 ## High School
-
-## Real Life
-
-## First Business
-
-## The College Years
-
+Paintball war with William Sharner.
+## Life and Starting My 1st Business
+Phil-Tech
+## Back to School The College Years
+Roanoke, friends
 ## Early Career
 
 ## The Startup Years
