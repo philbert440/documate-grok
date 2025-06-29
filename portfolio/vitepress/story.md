@@ -21,7 +21,7 @@ Microsoft gave me the experience of seeing inside many large enterprise IT organ
 From WEU to Adapify to shipcode, the startup world is full of exciting projects to grow skills at a greatly increased pace.
 
 ## Meeting My Wife
-Eventually met my best friend,fell in love and married her in 2017.
+Eventually met my best friend, fell in love, and married her in 2017.
 
 ## Building A Family
-In 2018 we welcomed our daughter Rose into the world and in 2023 our son Keai. We also have a 130lb Great Pyrenees named Bear, and a cat named Eevee.
+In 2018, we welcomed our daughter Rose into the world and in 2023, our son Keai. We also have a 130lb Great Pyrenees named Bear, and a cat named Eevee.

@@ -153,6 +153,9 @@ function startServer() {
 
     const httpsServer = https.createServer(httpsOptions, app);
 
+    // Set timeout to 5 minutes for long responses
+    httpsServer.timeout = 300000; // 5 minutes in milliseconds
+
     httpsServer.listen(PORT, () => {
       console.log(`🚀 Philbot backend server running on HTTPS port ${PORT}`);
       console.log(`🔒 Health check: https://localhost:${PORT}/health`);
@@ -163,6 +166,9 @@ function startServer() {
   } else {
     // HTTP Server
     const httpServer = http.createServer(app);
+
+    // Set timeout to 5 minutes for long responses
+    httpServer.timeout = 300000; // 5 minutes in milliseconds
 
     httpServer.listen(PORT, () => {
       console.log(`🚀 Philbot backend server running on HTTP port ${PORT}`);
