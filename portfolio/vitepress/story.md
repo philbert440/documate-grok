@@ -1,7 +1,7 @@
 # My Story
-
+I'm 37 years old. I'm a US Citizen. I've never held security clearance, but am open and eligable to obtain it. I'm usually quite optimistic. I've been on many adventures and hope to be on many more in the years to come. I have a passion for leading technical teams and building useful things that scale.
 ## Childhood
-I was born in Corning, NY, the 2nd oldest of 6 boys and no girls. Thankfully I grew up with understanding parents, as I was the tinkerer of the family and more than once took things apart like the VCR to figure out how they worked and most of the time got the things back together. I remember having to tell my parents I accidently wiped the family computer while learning about hard drive partitions. When I wasn't doing that I was often on adventures with my brothers building tree forts and running around outside as kids did in the 90s.
+I was born September 18th 1987, in Corning, NY, the 2nd oldest of 6 boys and no girls. Thankfully I grew up with understanding parents, as I was the tinkerer of the family and more than once took things apart like the VCR to figure out how they worked and most of the time got the things back together. I remember having to tell my parents I accidently wiped the family computer while learning about hard drive partitions. When I wasn't doing that I was often on adventures with my brothers building tree forts and running around outside as kids did in the 90s.
 
 ## High School
 Paintball war with William Sharner when I was 16.
