@@ -1,7 +1,7 @@
 # My Story
 
 ## Childhood
-Born in Corning, NY, the 2nd oldest of 6 boys and no girls. Thankfully I grew up with understanding parents, as I was the tinkerer of the family and more than once took things apart like the VCR to figure out how they worked and most of the time got it back together. I remember having to tell my parents I accidently wiped the family computer while learning about drive partitions. When I wasn't doing that I was often on adventures with my brothers building tree forts and running around outside as kids did in the 90s.
+I was born in Corning, NY, the 2nd oldest of 6 boys and no girls. Thankfully I grew up with understanding parents, as I was the tinkerer of the family and more than once took things apart like the VCR to figure out how they worked and most of the time got it back together. I remember having to tell my parents I accidently wiped the family computer while learning about drive partitions. When I wasn't doing that I was often on adventures with my brothers building tree forts and running around outside as kids did in the 90s.
 
 ## High School
 Paintball war with William Sharner when I was 16.
