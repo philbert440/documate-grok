@@ -30,16 +30,23 @@ export default defineConfig({
       {
         text: 'Projects',
         items: [
-          { text: 'Shipcode from 0-1', link: '/shipcode' },
+          { text: 'Scaling Shipcode Globally', link: '/projects.html#event-based-microservices-cqrs-and-domain-driven-design' },
+          { text: 'Testing, Deployment, and CI/CD', link: '/projects.html#event-based-microservices-cqrs-and-domain-driven-design' },
+          { text: 'Monitoring, Stability, and Security', link: '/projects.html#event-based-microservices-cqrs-and-domain-driven-design' },
+          { text: 'Real-Time Collaboration', link: '/projects.html#event-based-microservices-cqrs-and-domain-driven-design' },
+          { text: 'Shipcode from 0-1', link: '/projects.html#event-based-microservices-cqrs-and-domain-driven-design' },
+          { text: 'Developer Tooling Overhaul', link: '/shipcode' },
           { text: 'Flagship Integrations', link: '/shipcode' },
           { text: 'Home Test Pro', link: '/adapify' },
           { text: 'RxSoil Algorithm to AI', link: '/adapify' },
           { text: 'Laboratory SaaS', link: '/adapify' },
           { text: 'Adapify Sports', link: '/adapify' },
-          { text: 'We Evolve Us', link: '/weu' },
+          { text: 'We Evolve Us', link: '/adapify' },
           { text: 'Sands Casino Hack', link: '/msft' },
           { text: 'Microsoft acquires Nokia', link: '/msft' },
-          { text: 'Multi-touch Wall and Table', link: '/pheon' }
+          { text: 'Adobe on Microsoft', link: '/msft' },
+          { text: 'Impressed with Netflix in 2013', link: '/msft' },
+          { text: 'Multi-touch Wall and Table', link: '/projects.html#pheon-technologies-group' }
         ]
       },
       {
@@ -49,9 +56,9 @@ export default defineConfig({
           { text: 'Adapify', link: '/adapify' },
           { text: 'Microsoft', link: '/msft' },
           { text: "-----During College-----"},
-          { text: '1901 Group', link: '/1901' },
-          { text: 'Genworth Financial', link: '/genworth' },
-          { text: 'Pheon Tech', link: '/pheon' },
+          { text: '1901 Group', link: '/oldjobs.html#_1901-group' },
+          { text: 'Genworth Financial', link: '/oldjobs.html#genworth-financial' },
+          { text: 'Pheon Tech', link: '/projects.html#pheon-technologies-group' },
           { text: 'Starbucks', link: '/oldjobs' },
           { text: 'Medco', link: '/oldjobs' },
           { text: "-----Before College-----"},
@@ -63,6 +70,7 @@ export default defineConfig({
           { text: 'McDonalds', link: '/oldjobs' },
           { text: "Noah's Electronics", link: '/oldjobs' },
           { text: "Medley's Cafe", link: '/oldjobs' },
+          { text: "Phil's MTG Cards", link: '/oldjobs' },
         ]
       },
       {
