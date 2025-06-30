@@ -5,10 +5,15 @@ This will eventually be a comprehensive list of all of the projects I've worked 
 This was a fun project that I knocked out in a weekend. First I put together a vitepress site and added some details about past projects, experience, and a short bio with some fun stories. What's nice about vitepress is the documentation is all generated from markdown which make it easy to write and also easy for AI to ingest, I used the OpenAI Embeddings API to generate embeddings from the md files which is all stored in a sqlite db and then thats fed in the Grok-3-mini prompt with gaurd rails defined so that it doesn't make up stuff and sticks to what it knows based on the info I proved here.
 
 ## Scaling Shipcode Globally
+The first customer onboarded to Shipcode was a fitness fasion brand from Australia that had stores in Australia New Zealand Singapore and the US. We needed to still be able to handle low latency real time collaboration between opposite sides of the world.
 
 ## Documentation & AI
+My team at shipcode also leveraged comprehensive documentation to train an AI assistant within Shipcode, enabling it to manipulate data effectively for user interactions. The training process utilized pre-existing, well-structured documentation to empower the AI to modify specific data properties dynamically and extract specific components as needed, delivering tailored responses and functional changes. This approach yielded impressive results, enhancing user experience and enabling them to just talk to an AI assitant in natural language to make changes to their site or app.
 
 ## Monitoring, Stability, & Security
+I implemented real-time threat detection using Falco to monitor runtime security for containers and hosts in our AWS EKS cluster. Following external penetration testing, I refined Falco rules to reduce false positives and align with our threat model. I performed system hardening, including least privilege principles, network policies, and pod security standards, and documented these steps, mapping them to SOC2 controls (e.g., CC6.1, CC6.6) and PCI DSS requirements (e.g., Requirement 6).
+
+I conducted load testing and configured autoscaling for Knative microservices, enabling scale-to-zero to optimize costs and implementing autoscaling with panic scaling to handle load spikes. Karpenter was used for efficient EKS node scaling. I set up logging, tracing, and monitoring for services and Kafka topics using OpenTelemetry, Prometheus, and SigNoz to provide logs and alerting. Additionally, I migrated microservices from a shared RDS instance to individual Aurora PostgreSQL instances for improved isolation and performance.
 
 ## Testing, Deployment, & CI/CD
 

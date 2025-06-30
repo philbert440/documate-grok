@@ -1,5 +1,5 @@
 # Hobbies
-These are the things I like to do in my free time.
+These are the things I like to do in my free time, there are way too many and never enough time.
 
 ## Bass Guitar
 Not great or anything but I enjoy it.

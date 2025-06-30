@@ -13,7 +13,7 @@ Moved out on my own at 17 and started figuring out what I wanted to do with my l
 
 ## Back to School The College Years
 And so I started working on getting my Bachelor of Science in Management Information Systems.
-While going to college in Roanoke,VA I made some lifelong friends, and worked on some moee fun projects. One of them [Pheon Tech](/projects.html#pheon-technologies-group) involved me removing the LCD matrix out of my TV to build a multi-touch table and bought a projector to build a multi-touch wall in my apartment while working full-time to put myself through full-time college. I didn't sleep much.
+While going to college in Roanoke, VA I made some lifelong friends, and worked on some moee fun projects. One of them [Pheon Tech](/projects.html#pheon-technologies-group) involved me removing the LCD matrix out of my TV to build a multi-touch table and bought a projector to build a multi-touch wall in my apartment while working full-time to put myself through full-time college. I didn't sleep much.
 
 ## Early Career
 Microsoft gave me the experience of seeing inside and contributing 1st hand to many large enterprise IT organizations.
