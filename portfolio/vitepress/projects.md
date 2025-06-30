@@ -21,9 +21,6 @@ I enjoyed implementing GitHub Actions workflows for pull requests (PRs), enablin
 ## Shipcode: Developer Tooling Overhaul
 Nx Monorepo tooling
 
-## Shipcode: The Host System
-We used Istio service mesh and knative.
-
 ## Shipcode: Real Time Collaboration
 I led the Shipcode engineering team, collaborating with the Design and Sales teams to define requirements for a microservice managing user cursor position, user selection, and simultaneous multi-user change merging. I worked with engineers to prioritize delivery and deployment, ensuring efficient implementation.
 
@@ -43,13 +40,13 @@ Recommendations Algorithm was rewritten for generative AI responses.
 Laboratory D2C SaaS
 
 ## Adapify: Adapify Sports
-
+Youth Sport Team/Club/League SaaS and payments platform.
 
 ## Adapify: We Evolve Us
 Local Social Network for crowdfunding and collaboration to make communitues great
 
 ## Microsoft: Sands Casino Hack Response
-FBI, Treasury, Homeland Security, and a small handful of Microsofts top Security people.
+FBI, Treasury, Homeland Security, a handful of Microsofts top Security people and me.
 
 ## Microsoft: Nokia Acquisition
 Led the migration effort for that parts of Nokia that Microsoft didn't buy and MSIT came in and absorbed what's left.
