@@ -16,16 +16,13 @@ I implemented real-time threat detection using Falco to monitor runtime security
 I conducted load testing and configured autoscaling for Knative microservices, enabling scale-to-zero to optimize costs and implementing autoscaling with panic scaling to handle load spikes. Karpenter was used for efficient EKS node scaling. I set up logging, tracing, and monitoring for services and Kafka topics using OpenTelemetry, Prometheus, and SigNoz to provide logs and alerting. Additionally, I migrated microservices from a shared RDS instance to individual Aurora PostgreSQL instances for improved isolation and performance.
 
 ## Shipcode: Development, Testing, Deployment, and CI/CD
-I had a lot of fun with this one.
+I enjoyed implementing GitHub Actions workflows for pull requests (PRs), enabling developers to add a label to deploy the full stack to a shared development EKS cluster. The workflow built only the components affected by changes in the monorepo, using the latest from the main branch for the rest. This allowed each PR to be tested independently before approval and merging. Another workflow then tested the merged changes against production configuration and sanitized production data. I also automated the release process, enabling the team to perform multiple weekly production releases. This improved release cadence and reduced the time from feature request or bug identification to solution delivery by approximately 40 times.
 
 ## Shipcode: The Host System
-
+We used Istio service mesh and knative.
 
 ## Shipcode: Real Time Collaboration
-
-
-## Shipcode: The Canvas System
-
+I led the Shipcode engineering team, collaborating with the Design and Sales teams to define requirements for a microservice managing user cursor position, user selection, and simultaneous multi-user change merging. I worked with engineers to prioritize delivery and deployment, ensuring efficient implementation.
 
 ## Shipcode: from 0-1
 
@@ -34,6 +31,7 @@ I had a lot of fun with this one.
 Nx Monorepo tooling
 
 ## Shipcode: Flagship Integrations
+
 Realizing the need for a complete rewrite
 
 ## Adapify: Home Test Pro
