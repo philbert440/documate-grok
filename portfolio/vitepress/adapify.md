@@ -17,5 +17,3 @@ The team quickly put together 5 MVPs for SaaS platforms for different industry s
 ## Handing off the CEO hat
 
 ## Home Test Pro
-
-## A Tragic Ending

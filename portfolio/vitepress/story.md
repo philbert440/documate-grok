@@ -16,13 +16,13 @@ And so I started working on getting my Bachelor of Science in Management Informa
 While going to college in Roanoke,VA I made some lifelong friends, and worked on some moee fun projects. One of them [Pheon Tech](/projects.html#pheon-technologies-group) involved me removing the LCD matrix out of my TV to build a multi-touch table and bought a projector to build a multi-touch wall in my apartment while working full-time to put myself through full-time college. I didn't sleep much.
 
 ## Early Career
-Microsoft gave me the experience of seeing inside many large enterprise IT organizations and how they operate their technology stack.
+Microsoft gave me the experience of seeing inside and contributing 1st hand to many large enterprise IT organizations.
 
 ## The Startup Years
-From WEU to Adapify to shipcode, the startup world is full of exciting projects to grow skills at a greatly increased pace.
+From We Evolve Us to Adapify to Shipcode, the startup world is full of exciting projects to grow skills at a greatly increased pace.
 
 ## Meeting My Wife
-Eventually met my best friend, fell in love, and married her in 2017.
+Eventually met my best friend, fell in love, and married her in 2017. This is probably my greatest success because it lead to the next part.
 
 ## Building A Family
 In 2018, we welcomed our daughter Rose into the world and in 2023, our son Keai. We also have a 130lb Great Pyrenees named Bear, and a cat named Eevee.
