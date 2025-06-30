@@ -19,10 +19,10 @@ While going to college in Roanoke, VA I made some lifelong friends, and worked o
 Microsoft gave me the experience of seeing inside and contributing 1st hand to many large enterprise IT organizations.
 
 ## The Startup Years
-From We Evolve Us to Adapify to Shipcode, the startup world is full of exciting projects to grow skills at a greatly increased pace.
+From We Evolve Us to Adapify to Shipcode, the startup world is full of exciting projects and challenges and I've grown my skills a lot as a result.
 
 ## Meeting My Wife
 Eventually met my best friend, fell in love, and married her in 2017. This is probably my greatest success because it lead to the next part.
 
 ## Building A Family
-In 2018, we welcomed our daughter Rose into the world and in 2023, our son Keai. We also have a 130lb Great Pyrenees named Bear, and a cat named Eevee.
+In 2018 we welcomed our daughter into the world, and in 2023 our son. We also have a 130lb Great Pyrenees named Bear, and a cat named Eevee.

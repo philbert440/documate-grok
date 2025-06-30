@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Phil Tompkins"
-  text: "Engineering Leader"
+  text: "Builder of Things"
   tagline: Scaling Teams and Technology
   image:
     src: /images/self.jpg
@@ -14,8 +14,8 @@ hero:
       text: Projects
       link: /projects
     - theme: alt
-      text: Work Experience
-      link: /work-xp
+      text: About Me
+      link: /story
 
 features:
   - title: Shipcode
