@@ -12,20 +12,11 @@ Now we're getting back into the old jobs now ones I had during college and durin
 My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
 
 ## Phil-Tech
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
+
 
 ## Phil's MTG Cards
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
+
 
 ## Old and Odd Jobs
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
+
 
