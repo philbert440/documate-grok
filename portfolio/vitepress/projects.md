@@ -23,17 +23,17 @@ I conducted load testing and configured autoscaling for Knative microservices, e
 I enjoyed implementing GitHub Actions workflows for pull requests (PRs), enabling developers to add a label to deploy the full stack to a shared development EKS cluster. The workflow built only the components affected by changes in the monorepo, using the latest from the main branch for the rest. This allowed each PR to be tested independently before approval and merging. Another workflow then tested the merged changes against production configuration and sanitized production data. I also automated the release process, enabling the team to perform multiple weekly production releases. This improved release cadence and reduced the time from feature request or bug identification to solution delivery by approximately 40 times.
 
 ## Shipcode: Developer Tooling Overhaul
-Nx Monorepo tooling
+I need to add all the cool stuff we did with Nx, Pulumi, and other things here.
 
 ## Shipcode: Real Time Collaboration
 I led the Shipcode engineering team, collaborating with the Design and Sales teams to define requirements for a microservice managing user cursor position, user selection, and simultaneous multi-user change merging. I worked with engineers to prioritize delivery and deployment, ensuring efficient implementation.
 
 ## Shipcode: from 0-1
+I assembled a core team of three of the company's top engineers, and together, we embarked on a comprehensive rewrite of the codebase. This effort focused on delivering a scalable, reliable product that aligned with the vision articulated by the CEO and CTO, transforming conceptual goals into a tangible, high-quality solution.
 There is a lot to add here, Domain Driven Design, CQRS Architecture, Event Drive Microservices, Angular, Nest, Next, Azure, AWS, GCP, CosmoDB, Postgres, Nest, Next, WebRTC, we were moving quickly and able to rip out anything that didn't serve us and put in its place somethings that did.
 
 ## Branding Brand: Flagship Integrations
-I was initially appointed as a Senior Engineering Manager at Branding Brand, tasked with leading a team responsible for developing integrations with external services for Flagship, the company's primary product at the time. Within my first six months, I observed significant challenges, including the dissolution of the R&D team and the departure of the product manager and several key engineers. Upon closer examination, it became evident that the product, as originally presented, relied heavily on non-functional demoware and lacked a robust architectural foundation.
-Recognizing the need for a strategic overhaul, I spearheaded an initiative to rebuild the product from first principles, prioritizing maintainability and flexibility. I assembled a core team of three of the company's top engineers, and together, we embarked on a comprehensive rewrite of the codebase. This effort focused on delivering a scalable, reliable product that aligned with the vision articulated by the CEO and CTO, transforming conceptual goals into a tangible, high-quality solution.
+I was initially appointed as a Senior Engineering Manager at Branding Brand, tasked with leading a team responsible for developing integrations with external services for Flagship, the company's primary product at the time. Within my first six months, I observed significant challenges, including the dissolution of the R&D team and the departure of the product manager and several key engineers. Upon closer examination, it became evident that the product, as originally presented, relied heavily on non-functional demoware and lacked a robust architectural foundation. Recognizing the need for a strategic overhaul, I spearheaded an initiative to rebuild the product from first principles, prioritizing maintainability and flexibility. 
 
 ## Adapify: Home Test Pro
 Adapifies expansion into water and air quality testing.
