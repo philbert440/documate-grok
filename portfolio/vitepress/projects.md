@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Projects  
 This will eventually be a comprehensive list of all of the projects I've worked on over the years going back in time as you scroll down.
 
@@ -62,7 +66,10 @@ Worked with Netflix IT team through setup, configuration, and deployment of Offi
 Worked with key stakeholder to plan, prep, and migrate 3M's data to Azure Cloud Storage and OneDrive.
 
 ## Microsoft: Nielsen 50,000 person Cloud Migration
-Scripted the migration of a 50,000 user organization from on-prem to cloud infrastructure seemlessly.
+Continued to develop automation scripts and smoothly transitioned a 50,000-user organization from on-premises to cloud infrastructure.
+
+## Microsoft: Novell 12,000 person Cloud Migration
+Planned, prepped, and scripted solutions to seamlessly migrate a 12,000-user organization from on-premises systems to cloud-based infrastructure.
 
 ## Pheon Technologies Group
 In 2009, I saw a Microsoft Research video of a touch screen table with infinite points of contact. After seeing that and deciding that I needed one in my apartment. I found NUI(Natural User Interface) group and open source project made up of a couple hundred other like minded individuals around the work attempting to build somethings similar. Community Core Vision was the software to enable multi touch devices using FTIR (Frustrated Total Internal Reflection). This was acheived by placing infrared led strips around the edges of an enlightened acrylic panel, to flood the panel with light. Whenever anything came in contact with the surface that would reflect to the other side where there was a modified PS3 eye cam with an infrared filter to visually pick up the blobs of light being reflected, then Community Core Vision would translate those light blobs into touch input. I also helped with organizing a group buy for a manufacturing run of enlightened acrylic panels for building the devices.

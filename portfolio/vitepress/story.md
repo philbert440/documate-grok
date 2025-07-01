@@ -1,5 +1,9 @@
-## About Me
-I’m a 37-year-old U.S. citizen with a passion for leading technical teams and building scalable, impactful solutions. With a Bachelor of Science in Management Information Systems, I’ve spent over a decade navigating the dynamic worlds of enterprise IT and startups, honing my expertise in technology and leadership. Eligible for security clearance, I’m driven by curiosity, innovation, and a desire to create meaningful systems. I live with my wife, two children, a Great Pyrenees named Bear, and a cat named Eevee, balancing a fulfilling family life with my professional ambitions.
+---
+outline: deep
+---
+
+# About Me
+I’m a 37-year-old U.S. citizen with a passion for leading technical teams and building scalable, impactful solutions. With a Bachelor of Science in Management Information Systems, I’ve spent a decade and a half navigating the dynamic worlds of enterprise IT and startups, honing my expertise in technology and leadership. I’m driven by curiosity, innovation, and a desire to create meaningful systems. I have a wife, two children, a Great Pyrenees named Bear, and a cat named Eevee, and enjoy balancing a fulfilling family life with my professional ambitions.
 
 ## Early Life
 Born on September 18, 1987, in Corning, NY, I grew up as the second eldest of six brothers in a supportive family. A natural tinkerer, I often disassembled household electronics—like the family VCR—to understand how they worked, occasionally reformatting the family computer in my quest to learn. My childhood was filled with outdoor adventures, building tree forts, and embracing the freedom of the 1990s.

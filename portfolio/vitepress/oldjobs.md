@@ -3,20 +3,19 @@ outline: deep
 ---
 
 # Work Experience During and Before College
-Now we're getting back into the old jobs now ones I had during college and during the couple of years before going to college, and if you get down to the bottom of this list you'll find summer jobs I worked when I was in high school back to my first ever job.
+Below is a summary of jobs I did during and before college from summer gigs in high school to starting with my first job in the tech industry.
 
 ## 1901 Group
-1901 Group was a managed services startup operating out of Virginia Tech's Corporate Research Center, it was a fun job where I got to dive deeping into the Network Security side of things.
+At this managed services startup in Virginia Tech’s Corporate Research Center, I dove into network security, gaining hands-on experience in a dynamic, tech-driven environment.
 
 ## Genworth Financial
-My 1st official job in the tech industry that I didn't start myself. I work Level 2 Software Apps Support and Development, built some scripts to automate some things, wrote some documentation, and worked with between the front line support and the Sys Admins.
+My first official role in the tech industry, working as a Level 2 Software Applications Support and Development specialist. I built automation scripts, wrote documentation, and bridged communication between frontline support and system administrators.
 
 ## Phil-Tech
+My first entrepreneurial venture, a sole proprietorship focused on freelance tech consulting and building/selling custom computers. In my first year, I earned $20,000, which inspired me to pursue a bachelor’s degree to further my education.
 
+## Phil’s MTG Cards
+As a high school freshman and sophomore, I ran an unofficial business buying Magic: The Gathering card collections on eBay, selling them to classmates, and hosting after-school tournaments. I also built my first website, enabling a few online sales.
 
-## Phil's MTG Cards
-
-
-## Old and Odd Jobs
-
-
+## Early Jobs
+Before entering the tech world, I held various roles, including barista at Starbucks, factory worker at a Pepsi plant, customer service representative at HSN, electronics salesperson, and team member at several fast-food restaurants.

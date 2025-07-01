@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Hobbies
 These are the things I like to do in my free time, there are way too many and never enough time.
 
