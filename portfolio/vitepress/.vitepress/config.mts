@@ -8,7 +8,7 @@ const env = loadEnv(process.env.NODE_ENV || 'development', process.cwd(), '')
 export default defineConfig({
   title: "Phil Tompkins",
   description: "Builder of things",
-  
+
   // Vite configuration for environment variables
   vite: {
     define: {

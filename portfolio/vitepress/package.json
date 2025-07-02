@@ -15,7 +15,8 @@
     "config:build": "node scripts/build-config.js"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.10"
+    "@types/node": "^24.0.10",
+    "vitepress": "^1.0.0"
   },
   "dependencies": {
     "@documate/vue": "file:../../ui/vue"
