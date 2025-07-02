@@ -1,7 +1,7 @@
 {
-  "backendUrl": "http://localhost:3000",
+  "backendUrl": "https://backend.philtompkins.com",
   "nodeEnv": "development",
   "buildEnv": "development",
-  "timestamp": "2025-06-28T17:11:21.710Z",
+  "timestamp": "2025-07-02T02:08:27.113Z",
   "isProduction": false
 }

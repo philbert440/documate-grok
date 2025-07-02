@@ -1,6 +1,6 @@
 {
-  "name": "documate-vitepress-starter",
-  "description": "A template for creating a new VitePress site with Documate",
+  "name": "philbot-vitepress-starter",
+  "description": "A template for creating a new VitePress site with philbot",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
-    "vitepress": "^1.0.0"
+    "vitepress": "^1.6.3"
   },
   "dependencies": {
     "@documate/vue": "file:../../ui/vue"
