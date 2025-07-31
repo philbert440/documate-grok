@@ -6,7 +6,7 @@ outline: deep
 This will eventually be a comprehensive list of all of the projects I've worked on over the years going back in time as you scroll down.
 
 ## Philbot & This Portfolio Site
-This was a fun project that I knocked out in a weekend. First I put together a vitepress site and added some details about past projects, experience, and a short bio with some fun stories. What's nice about vitepress is the documentation is all generated from markdown which make it easy to write and also easy for AI to ingest, I used the OpenAI Embeddings API to generate embeddings from the md files which is all stored in a sqlite db and then thats fed in the Grok-3-mini prompt with gaurd rails defined so that it doesn't make up stuff and sticks to what it knows based on the info I proved here.
+This was a fun project that I knocked out in a weekend. First I put together a vitepress site and added some details about past projects, experience, and a short bio with some fun stories. What's nice about vitepress is the documentation is all generated from markdown which make it easy to write and also easy for AI to ingest, I used the OpenAI Embeddings API to generate embeddings from the md files which is all stored in a sqlite db and then thats fed in the Grok prompt with gaurd rails defined so that it doesn't make up stuff and sticks to what it knows based on the info I proved here.
 
 ## Shipcode: Scaling Globally
 The first customer onboarded to Shipcode was a fitness fasion brand from Australia that had stores in Australia New Zealand Singapore and the US. We needed to still be able to handle low latency real time collaboration between opposite sides of the world. 
