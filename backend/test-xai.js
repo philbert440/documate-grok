@@ -2,7 +2,7 @@ require('dotenv').config();
 const fetch = require('node-fetch');
 
 const XAI_API_BASE = 'https://api.x.ai/v1';
-const GROK_MODEL = 'grok-3-mini-fast'; // Updated model name
+const GROK_MODEL = 'grok-4'; // Updated model name
 
 async function testXAIAPI() {
   console.log('Testing xAI API directly...');

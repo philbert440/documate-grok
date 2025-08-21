@@ -8,7 +8,7 @@ const MAX_CONTEXT_TOKEN = 1500;
 
 // xAI API configuration
 const XAI_API_BASE = 'https://api.x.ai/v1';
-const GROK_MODEL = 'grok-3-mini-fast';
+const GROK_MODEL = 'grok-4';
 
 // Helper function to create chat completion using xAI API
 async function createChatCompletion(messages, apiKey) {
